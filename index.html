@@ -68,10 +68,6 @@
       --slate-light:#7A879F;
       --line: rgba(255,255,255,0.10);
     }
-    .nav-cta, .btn-primary, .stack-pill{ background:var(--signal); }
-    header{ background:rgba(10,15,28,0.86); }
-    .services{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-    .contact{ border:1px solid rgba(255,255,255,0.08); }
   }
 
   *{box-sizing:border-box;}
@@ -596,6 +592,14 @@
   footer .logo{font-size:15px;}
   footer .logo-mark{width:22px; height:22px; font-size:10px;}
   .footer-note{font-size:13px; color:var(--slate-light);}
+
+  /* Ajustes finales de modo oscuro: van al final para ganar la prioridad en la cascada */
+  @media (prefers-color-scheme: dark){
+    header{ background:rgba(8,12,22,0.9); border-bottom-color:var(--line); }
+    .nav-cta, .btn-primary, .stack-pill{ background:var(--signal); }
+    .services{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .contact{ border:1px solid rgba(255,255,255,0.08); }
+  }
 </style>
 </head>
 <body>
