@@ -346,6 +346,9 @@
     font-family:'Sora', sans-serif; font-size:58px; font-weight:800;
     color:var(--signal); line-height:1;
   }
+  .case-stat-number.text{
+    font-size:22px; line-height:1.25;
+  }
   .case-stat-label{
     margin-top:12px; font-size:12.5px; color:var(--slate);
     font-family:'IBM Plex Mono', monospace; letter-spacing:0.03em;
@@ -686,6 +689,30 @@
           <span class="stack-pill">Python</span>
           <span class="stack-pill">Selenium</span>
           <span class="stack-pill">Lectura automática de XML</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card reveal" style="margin-top:24px;">
+      <div class="case-stat">
+        <div class="case-stat-number text">RUC → Reporte</div>
+        <div class="case-stat-label">consulta y consolidación sin intervención manual</div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-row">
+          <div class="case-tag before">Antes</div>
+          <p>El equipo ingresaba manualmente el RUC de cada cliente a las centrales de riesgo, descargaba los informes uno por uno y consolidaba a mano la exposición de cada cliente.</p>
+        </div>
+        <div class="case-row">
+          <div class="case-tag after">Con LS Dynamics</div>
+          <p>Desarrollamos un bot en Python que ingresa el RUC automáticamente, extrae la información de cada informe y entrega un reporte consolidado con el nivel de exposición de todos los clientes de la lista.</p>
+        </div>
+
+        <div class="case-stack">
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">Automatización RPA</span>
+          <span class="stack-pill">Consolidación automática de reportes</span>
         </div>
       </div>
     </div>
