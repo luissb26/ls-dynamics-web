@@ -325,6 +325,56 @@
     .compare-center{padding:4px 0;}
   }
 
+  /* ===== CASO DE ÉXITO ===== */
+  .case-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:44px;
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:44px;
+    align-items:center;
+    box-shadow:0 20px 50px -30px rgba(11,31,58,0.2);
+  }
+  .case-stat{
+    text-align:center;
+    border-right:1px solid var(--line);
+    padding-right:44px;
+  }
+  .case-stat-number{
+    font-family:'Sora', sans-serif; font-size:58px; font-weight:800;
+    color:var(--signal); line-height:1;
+  }
+  .case-stat-label{
+    margin-top:12px; font-size:12.5px; color:var(--slate);
+    font-family:'IBM Plex Mono', monospace; letter-spacing:0.03em;
+    line-height:1.4;
+  }
+  .case-body{display:flex; flex-direction:column; gap:18px;}
+  .case-row{display:flex; gap:14px; align-items:flex-start;}
+  .case-row p{color:var(--slate); font-size:15px; line-height:1.55;}
+  .case-tag{
+    flex-shrink:0; font-family:'IBM Plex Mono', monospace; font-size:11px;
+    font-weight:700; letter-spacing:0.05em; text-transform:uppercase;
+    padding:6px 10px; border-radius:6px; margin-top:1px;
+  }
+  .case-tag.before{background:var(--bg); color:var(--slate-light); border:1px solid var(--line);}
+  .case-tag.after{background:rgba(47,111,237,0.08); color:var(--signal); border:1px solid rgba(47,111,237,0.25);}
+  .case-stack{display:flex; gap:8px; flex-wrap:wrap; margin-top:4px;}
+  .stack-pill{
+    background:var(--ink); color:white; font-size:12px; font-weight:600;
+    padding:6px 13px; border-radius:100px; font-family:'IBM Plex Mono', monospace;
+  }
+  @media (max-width: 760px){
+    .case-card{grid-template-columns:1fr; padding:28px 22px; gap:24px;}
+    .case-stat{
+      border-right:none; border-bottom:1px solid var(--line);
+      padding-right:0; padding-bottom:24px;
+    }
+    .case-stat-number{font-size:48px;}
+  }
+
   /* ===== SECTION HEADERS ===== */
   .section-head{max-width:640px; margin-bottom:52px;}
   .section-head h2{font-size:clamp(26px,3vw,36px); margin-top:14px; font-weight:800;}
@@ -515,6 +565,7 @@
     <a href="#top" class="logo"><span class="logo-mark">LS</span> LS Dynamics</a>
     <div class="navlinks">
       <a href="#servicios">Servicios</a>
+      <a href="#casos">Casos de éxito</a>
       <a href="#proceso">Cómo trabajamos</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#formulario" class="nav-cta">Hablemos</a>
@@ -601,6 +652,40 @@
           <div class="compare-item">Procesos funcionando solos</div>
           <div class="compare-item">Respuesta instantánea, 24/7</div>
           <div class="compare-item">Costos operativos reducidos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="casos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Caso de éxito</span>
+      <h2>De un proceso 100% manual a 95% menos tiempo</h2>
+      <p>Así ayudamos a una financiera peruana a eliminar uno de los procesos más lentos y repetitivos de su operación.</p>
+    </div>
+
+    <div class="case-card reveal">
+      <div class="case-stat">
+        <div class="case-stat-number">95%</div>
+        <div class="case-stat-label">menos tiempo en el proceso</div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-row">
+          <div class="case-tag before">Antes</div>
+          <p>El equipo redactaba las cartas a mano, una por una, revisando manualmente cada documento para completar los datos correctos.</p>
+        </div>
+        <div class="case-row">
+          <div class="case-tag after">Con LS Dynamics</div>
+          <p>Automatizamos todo el flujo: el sistema lee la información fuente directamente desde XML y genera la carta lista para enviar, sin intervención manual.</p>
+        </div>
+
+        <div class="case-stack">
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">Selenium</span>
+          <span class="stack-pill">Lectura automática de XML</span>
         </div>
       </div>
     </div>
