@@ -6,7 +6,8 @@
 <title>LS Dynamics — Socio tecnológico estratégico</title>
 <meta name="description" content="LS Dynamics ayuda a empresas a responder más rápido, gastar menos y vender mejor con automatización, IA y tecnología aplicada a resultados reales.">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0B1F3A">
+<meta name="theme-color" content="#F5F8FC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0F1C" media="(prefers-color-scheme: dark)">
 
 <!-- IMPORTANTE: reemplaza esta URL por tu dominio real cuando lo compres -->
 <link rel="canonical" href="https://www.lsdynamics.com/">
@@ -50,6 +51,7 @@
     --amber:#F2A93B;
     --bg:#F5F8FC;
     --paper:#FFFFFF;
+    --text:#0B1F3A;
     --slate:#48566E;
     --slate-light:#8391A8;
     --line: rgba(11,31,58,0.10);
@@ -57,12 +59,27 @@
     --max: 1180px;
   }
 
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0A0F1C;
+      --paper:#131B2E;
+      --text:#EEF2FA;
+      --slate:#AAB6CC;
+      --slate-light:#7A879F;
+      --line: rgba(255,255,255,0.10);
+    }
+    .nav-cta, .btn-primary, .stack-pill{ background:var(--signal); }
+    header{ background:rgba(10,15,28,0.86); }
+    .services{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .contact{ border:1px solid rgba(255,255,255,0.08); }
+  }
+
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
     background:var(--bg);
-    color:var(--ink);
+    color:var(--text);
     font-family:'Inter', -apple-system, sans-serif;
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
@@ -71,7 +88,7 @@
     font-family:'Sora', sans-serif;
     margin:0;
     letter-spacing:-0.02em;
-    color:var(--ink);
+    color:var(--text);
   }
   p{margin:0;}
   a{color:inherit; text-decoration:none;}
@@ -112,7 +129,7 @@
     font-weight:800;
     font-size:19px;
     display:flex; align-items:center; gap:10px;
-    color:var(--ink);
+    color:var(--text);
   }
   .logo-mark{
     width:28px; height:28px; border-radius:7px;
@@ -184,7 +201,7 @@
   }
   .btn-primary:hover{background:var(--signal); transform:translateY(-2px); box-shadow:0 10px 24px rgba(47,111,237,0.32);}
   .btn-ghost{
-    background:transparent; color:var(--ink);
+    background:transparent; color:var(--text);
     border:1.5px solid var(--line);
   }
   .btn-ghost:hover{border-color:var(--signal); color:var(--signal);}
@@ -193,7 +210,7 @@
     margin-top:38px; display:flex; gap:28px; flex-wrap:wrap;
   }
   .hero-trust div{font-size:13px; color:var(--slate-light); font-family:'IBM Plex Mono', monospace;}
-  .hero-trust strong{display:block; font-family:'Sora',sans-serif; color:var(--ink); font-size:20px; font-weight:700;}
+  .hero-trust strong{display:block; font-family:'Sora',sans-serif; color:var(--text); font-size:20px; font-weight:700;}
 
   /* signature flow diagram */
   .flow-card{
@@ -278,12 +295,12 @@
   }
   .lead-form.light .form-row label{color:var(--slate);}
   .lead-form.light .form-row input{
-    background:var(--bg); border:1px solid var(--line); color:var(--ink);
+    background:var(--bg); border:1px solid var(--line); color:var(--text);
   }
   .lead-form.light .form-row input::placeholder{color:var(--slate-light);}
   .lead-form.light .form-row input:focus{border-color:var(--signal); background:var(--paper);}
   .form-note.light{color:var(--slate-light);}
-  .form-success.light h3{color:var(--ink);}
+  .form-success.light h3{color:var(--text);}
   .form-success.light p{color:var(--slate);}
 
   /* ===== ANTES / DESPUÉS ===== */
@@ -486,7 +503,7 @@
     font-size:clamp(22px,2.6vw,29px);
     font-weight:700;
     line-height:1.32;
-    color:var(--ink);
+    color:var(--text);
   }
   .why-quote .hl{color:var(--signal);}
   .why-list{display:flex; flex-direction:column; gap:20px;}
@@ -497,7 +514,7 @@
     display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700;
   }
   .why-row p{color:var(--slate); font-size:15px;}
-  .why-row strong{color:var(--ink);}
+  .why-row strong{color:var(--text);}
 
   /* ===== CTA CONTACTO ===== */
   .contact{
